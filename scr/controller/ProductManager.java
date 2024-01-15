@@ -1,6 +1,10 @@
-package model;
+package controller;
+
+import model.Product;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class ProductManager {
@@ -33,6 +37,31 @@ public class ProductManager {
                 productList.remove(productList.get(i));
             }
         }
+    }
+    public void arrangedLowToHighPrice(){
+        Collections.sort(productList, new Comparator<Product>() {
+            @Override
+            public int compare(Product o1, Product o2) {
+               if (o1.getPrice()>o2.getPrice()){
+                   return 1;
+               }else if (o1.getPrice() == o2.getPrice()){
+                   return 0;
+               }else return -1;
+            }
+        });
+    }
+    public void arrangedHighToLowPrice(){
+        Collections.sort(productList, new Comparator<Product>() {
+            @Override
+            public int compare(Product o1, Product o2) {
+                if (o1.getPrice()<o2.getPrice()){
+                    return 1;
+                }else if (o1.getPrice() == o2.getPrice()){
+                    return 0;
+                }else return -1;
+            }
+        });
+
     }
     public void showList(){
         for (Product p: productList){

@@ -1,11 +1,8 @@
 package views;
 
 import model.Product;
-import model.ProductManager;
+import controller.ProductManager;
 
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -106,6 +103,24 @@ public class Main {
 
                     break;
                 case 5:
+                    System.out.println("______________________________________");
+                    System.out.println("Sắp xếp sản phẩm theo:");
+                    System.out.println("1. Giá tăng dần");
+                    System.out.println("2. Giá giảm dần");
+                    System.out.println("3. Quay lại");
+                    int choiceNumberArrange = intInput();
+                    switch (choiceNumberArrange){
+                        case 1:
+                            productManager.arrangedLowToHighPrice();
+                            productManager.showList();
+                            break;
+                        case 2:
+                            productManager.arrangedHighToLowPrice();
+                            productManager.showList();
+                            break;
+                        case 3:
+                            break;
+                    }
 
                     break;
                 case 6:
