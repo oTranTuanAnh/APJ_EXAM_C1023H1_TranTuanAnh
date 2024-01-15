@@ -35,7 +35,7 @@ public class Main {
             System.out.println("5. Sắp xếp");
             System.out.println("6. Tìm sản phẩm có giá đắt nhất");
             System.out.println("7. Đọc từ file");
-            System.out.println("7. Ghi vào file");
+            System.out.println("8. Ghi vào file");
             System.out.println("9. Thoát");
             System.out.print("Chọn chức năng: ");
             choice = in.nextInt();

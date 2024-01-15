@@ -13,7 +13,7 @@ public class ProductManager {
     private static final String NEW_LINE_SEPARATOR = "\n";
 
     // CSV file header
-    private static final String FILE_HEADER = "id,code,name";
+    private static final String FILE_HEADER = "id,name,price,quantity,descriptions";
     private Product product;
 
     public ProductManager() {
