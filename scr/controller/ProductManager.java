@@ -63,6 +63,20 @@ public class ProductManager {
         });
 
     }
+    public Product getMaxPriceProduct(){
+        double maxPrice = 0;
+        int indexMax = 0;
+        for (int i = 0; i < productList.size(); i++) {
+            if (productList.get(i).getPrice() > maxPrice){
+                maxPrice = productList.get(i).getPrice();
+                indexMax = i;
+            }
+        }
+        return productList.get(indexMax);
+    }
+    public void showProduct(Product product){
+        System.out.println(product);
+    }
     public void showList(){
         for (Product p: productList){
             System.out.println(p);

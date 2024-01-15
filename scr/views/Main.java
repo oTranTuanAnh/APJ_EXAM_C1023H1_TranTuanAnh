@@ -121,10 +121,11 @@ public class Main {
                         case 3:
                             break;
                     }
-
                     break;
                 case 6:
-
+                    System.out.println("_______________________________");
+                    System.out.println("Sản phẩm có giá đắt nhất là:");
+                    productManager.showProduct(productManager.getMaxPriceProduct());
                     break;
                 case 7:
 
