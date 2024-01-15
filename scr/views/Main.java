@@ -128,7 +128,10 @@ public class Main {
                     productManager.showProduct(productManager.getMaxPriceProduct());
                     break;
                 case 7:
-
+                    productManager.readFile("data/product.csv");
+                    break;
+                case 8:
+                    productManager.writeFile("data/product.csv");
                     break;
                 case 9:
                     System.exit(0);

@@ -66,4 +66,5 @@ public class Product {
                 "| quantity= " + quantity,
                 "| descriptions= " + descriptions);
     }
+
 }
